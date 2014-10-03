@@ -2,9 +2,11 @@
 
 var gulp = require('gulp');
 var gulpLmd = require('./index.js');
+var rename = require('gulp-rename');
 
 gulp.task('lmd', function () {
-  return gulp.src('test/app.lmd.js', { buffer: false })
+  return gulp.src('')
     .pipe(gulpLmd('test/app.lmd.js'))
+    .pipe(rename('app.js'))
     .pipe(gulp.dest('test/build'))
 });

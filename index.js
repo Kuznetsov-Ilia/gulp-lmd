@@ -7,8 +7,20 @@ var LMD = require('lmd');
 
 module.exports = function (path) {
   var stream = through.obj(function (file, enc, callback) {
-    if (file.isStream()) {
+    if (file.isNull()) {
       var lmd = new LMD(path);      
+      var streamer = through();
+      streamer.on('error', this.emit.bind(this, 'error'));
+      lmd.pipe(streamer);
+      lmd.log.pipe(process.stdout);
+
+      file.contents = streamer;
+
+      this.push(file);
+      return callback();
+
+    } else if (file.isStream()) {
+      /*var lmd = new LMD(path);      
       var streamer = through();
       streamer.on('error', this.emit.bind(this, 'error'));
       lmd.pipe(streamer);
@@ -17,7 +29,7 @@ module.exports = function (path) {
       file.contents = file.contents.pipe(streamer);
 
       this.push(file);
-      return callback();
+      return callback();*/
     } else {
       log('only streams, try `gulp.src("conf.lmd.js", { buffer: false })`');
       this.push(file);
