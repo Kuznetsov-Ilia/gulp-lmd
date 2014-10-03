@@ -1,6 +1,6 @@
 {
   "name": "gulp-lmd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "gulp lmd plugin",
   "author": "Ilia Kuznetsov",
   "contributors": [{
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/QiV/gulp-fest.git"
+    "url": "https://github.com/QiV/gulp-lmd.git"
   },
   "keywords": [
     "gulpplugin"
