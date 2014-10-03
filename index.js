@@ -16,7 +16,7 @@ module.exports = function (path) {
       this.push(file);
       return callback();
     } else {
-      log('only streams, try `gulp.src('')`');
+      log('only streams, try `gulp.src("")`');
       this.push(file);
       return callback();
     }
