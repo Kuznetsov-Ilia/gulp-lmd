@@ -1,0 +1,28 @@
+{
+  "name": "gulp-lmd",
+  "version": "0.0.0",
+  "description": "gulp lmd plugin",
+  "author": "Ilia Kuznetsov",
+  "contributors": [{
+    "name": "Ilia Kuznetsov",
+    "email": "killxxxvi@mail.ru"
+  }],
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "through2": "*",
+    "gulp-util": "*",
+    "lmd": "*"
+  },
+  "devDependencies": {
+    "gulp": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QiV/gulp-fest.git"
+  },
+  "keywords": [
+    "gulpplugin"
+  ],
+  "license": "MIT"
+}
