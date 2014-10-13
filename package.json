@@ -1,6 +1,6 @@
 {
   "name": "gulp-lmd",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "gulp lmd plugin",
   "author": "Ilia Kuznetsov",
   "contributors": [{
@@ -9,7 +9,7 @@
   }],
   "main": "index.js",
   "scripts": {},
-  "dependencies": {
+  "peerDependencies": {
     "through2": "*",
     "gulp-util": "*",
     "lmd": "*",
@@ -23,7 +23,8 @@
     "url": "https://github.com/QiV/gulp-lmd.git"
   },
   "keywords": [
-    "gulpplugin"
+    "gulpplugin",
+    "gulpfriendly"
   ],
   "license": "MIT"
 }
